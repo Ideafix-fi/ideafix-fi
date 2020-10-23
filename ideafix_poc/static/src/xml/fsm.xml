@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="FsmGeolocationWidget">
+        <button t-attf-class="btn o_tyro_paring #{widget.node.attrs.highlight? 'btn-primary':'btn-secondary'}">
+            <span><t t-esc="widget.node.attrs.string"/></span>
+        </button>
+    </t>
+</templates>

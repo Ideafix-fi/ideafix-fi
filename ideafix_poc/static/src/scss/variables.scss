@@ -1,0 +1,13 @@
+@include media-breakpoint-down(sm) {
+
+    .o_form_sheet td label {
+        font-size: 25px !important;
+    }
+
+    .o_form_sheet td {
+        font-size: 25px;
+    }
+    .o_kanban_view {
+        font-size: 25px !important;
+    }
+}

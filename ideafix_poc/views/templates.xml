@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend_fsm" name="asset backend fsm" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/ideafix_poc/static/src/js/fsm.js"></script>
+        </xpath>
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/ideafix_poc/static/src/scss/variables.scss"/>
+        </xpath>
+    </template>
+
+    <template id="task_trace_page" name="Task Status">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="row justify-content-center pt-5">
+                        <div class="alert alert-success text-centar">
+                            <h2>
+                                <span t-field="task.task_stage_id"/>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_task_view_form_inherit_ideafix_poc" model="ir.ui.view">
+        <field name="name">project.task.view.form.inherit.ideafix.project.and.field.customization</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_timer_start']" position="after">
+                <widget name="fsm_geolocation" attrs="{'invisible': ['|', '|', ('total_hours_spent', '=', 0), ('timesheet_timer_start', '!=', False), ('display_timesheet_timer', '=', False)]}" string="START POC" action="action_start" highlight="1"/>
+                <widget name="fsm_geolocation" attrs="{'invisible': ['|', '|', ('total_hours_spent', '=', 0), ('timesheet_timer_start', '=', False), ('display_timesheet_timer', '=', False)]}" string="STOP POC" action="action_stop" highlight="1"/>
+                <widget name="fsm_geolocation" attrs="{'invisible': ['|', '|', '|', ('display_timesheet_timer', '=', False), ('allow_timesheets', '=', False), ('total_hours_spent', '!=', 0), ('timesheet_timer_start', '!=', False)]}" string="START POC" action="action_start" highlight="1"/>
+                <widget name="fsm_geolocation" attrs="{'invisible': ['|', '|', '|', '|', ('is_fsm', '=', False), ('display_timesheet_timer', '=', False), ('allow_timesheets', '=', False), ('total_hours_spent', '!=', 0), ('timesheet_timer_start', '=', False)]}" string="STOP POC" action="action_stop" highlight="1"/>
+            </xpath>
+            <xpath expr="//field[@name='project_id']" position="after">
+                <field name="task_stage_id"/>
+                <field name="start_longitude"/>
+                <field name="start_latitude"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

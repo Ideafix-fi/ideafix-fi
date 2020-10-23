@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_task_create_timesheet_view_form_inherit_ideafix_poc" model="ir.ui.view">
+        <field name="name">project.task.create.timesheet.view.form.inherit.ideafix.project.and.field.customization</field>
+        <field name="model">project.task.create.timesheet</field>
+        <field name="inherit_id" ref="sale_timesheet_enterprise.project_task_create_timesheet_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <field name="end_longitude"/>
+                <field name="end_latitude"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

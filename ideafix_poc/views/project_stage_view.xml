@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_task_status_stage_form">
+        <field name="name">task.status.stage.form</field>
+        <field name="model">task.status.stage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="view_task_status_stage_list">
+        <field name="name">task.status.stage.list</field>
+        <field name="model">task.status.stage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_task_status_stage">
+        <field name="name">Task Stage</field>
+        <field name="res_model">task.status.stage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="task_status_stage_menu" name="Task Stage" parent="industry_fsm.fsm_menu_settings" sequence="11" action="action_task_status_stage" groups="industry_fsm.group_fsm_manager"/>
+</odoo>
