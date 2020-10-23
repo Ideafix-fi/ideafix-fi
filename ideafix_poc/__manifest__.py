@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "project_and_field_customization",
+    'name': "IdeaFix POC",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        IdeaFix POC""",
 
     'description': """
-        Long description of module's purpose
+        POC - 8
+        POC - 1
+        POC - 6
     """,
 
     'author': "My Company",
@@ -16,8 +17,8 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Customization',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['industry_fsm','website','crm'],
