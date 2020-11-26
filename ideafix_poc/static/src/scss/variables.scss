@@ -1,13 +1,30 @@
 @include media-breakpoint-down(sm) {
 
-    .o_form_sheet td label {
-        font-size: 25px !important;
+    .o_form_view.large .o_form_sheet td label {
+        font-size: 18px !important;
     }
-
-    .o_form_sheet td {
-        font-size: 25px;
+    
+    .o_form_view.large .o_form_sheet .o_notebook {
+        font-size: 18px !important;
     }
-    .o_kanban_view {
-        font-size: 25px !important;
+    
+    .o_form_view.large .o_form_sheet td {
+        font-size: 18px !important;
+    }
+    
+    .o_form_view.medium .o_form_sheet td label {
+        font-size: 15px !important;
+    }
+    
+    .o_form_view.medium .o_form_sheet .o_notebook {
+        font-size: 15px !important;
+    }
+    
+    .o_form_view.medium .o_form_sheet td {
+        font-size: 15px !important;
     }
 }
+
+
+
+

@@ -6,9 +6,9 @@
             <script type="text/javascript" src="/ideafix_poc/static/src/js/fsm.js"></script>
             <script type="text/javascript" src="/ideafix_poc/static/src/js/systray.js"></script>
         </xpath>
-        <!-- <xpath expr="//link[last()]" position="after">
+        <xpath expr="//link[last()]" position="after">
             <link rel="stylesheet" type="text/scss" href="/ideafix_poc/static/src/scss/variables.scss"/>
-        </xpath> -->
+        </xpath>
     </template>
 
     <template id="task_trace_page" name="Task Status">
